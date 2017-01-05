@@ -1,3 +1,10 @@
 #!/bin/bash
+#
+# Convenience script for running the starter app
 
-FLASK_APP=app.py flask run --host=0.0.0.0
+if [ -z "${VIRTUAL_ENV}" ]; then
+    echo "Must be run in an activated virtual environment"
+    exit 1
+fi
+
+FLASK_APP=starter/starter.py flask run --host=0.0.0.0
