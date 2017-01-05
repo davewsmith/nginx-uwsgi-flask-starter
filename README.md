@@ -20,7 +20,7 @@ gets you the former. `http://vagrant.io` gets you the latter.
 
 Pull this down from github, then
 
-   vagrant up
+    vagrant up
 
 On my Linux laptop with an SSD over a mediocre network connection, it takes about 10-15 minutes to build a VM. Once done, `http://localhost:8000` reaches the minimal flask starter app running inside the VM.
 
