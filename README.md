@@ -1,6 +1,6 @@
 # Build an Nginx/uWSGI/Python3/Flask VM
 
-This project builds a Virtual Machine for Flask development, using nginx, uwsgi, and Python3, with nginx serving a simple starter app's static files. It allows local development for web apps that will eventually deployed to a Raspberry Pi, but there's nothing Pi-specific here.
+This project builds a Virtual Machine for Flask development, using nginx, uwsgi, and Python3, with nginx serving a simple starter app's static files. It allows local development for web apps that will eventually be deployed to a Raspberry Pi, but there's nothing Pi-specific here.
 
 I put this together to record the fiddly bits of getting started with this stack. The VM is based on Ubuntu 16.04 instead of something closer to Jessie, mostly because I couldn't find a Debian box that had Vagrant host dir support installed, and 16.04 (like Jessie) uses `systemd`.
 
