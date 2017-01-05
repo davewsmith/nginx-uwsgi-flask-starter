@@ -22,7 +22,6 @@ virtualenv venv --python=python3
 
 # Set up nginx and uswgi
 sudo apt-get install -y nginx
-# sudo apt-get install -y uwsgi uwsgi-plugin-python3
 sudo apt-get install -y python-pip
 sudo pip3 install uwsgi
 
@@ -33,24 +32,19 @@ sudo mkdir /var/log/uwsgi
 sudo chown www-data:www-data /var/log/uwsgi
 
 sudo rm /etc/nginx/sites-enabled/default
-sudo cp provision/app.nginx /etc/nginx/sites-available/app
-sudo ln -s /etc/nginx/sites-available/app /etc/nginx/sites-enabled/
+sudo cp provision/starter.nginx /etc/nginx/sites-available/starter
+sudo ln -s /etc/nginx/sites-available/starter /etc/nginx/sites-enabled/
 
-mkdir -p /etc/uwsgi/apps-enabled
-sudo cp provision/app.ini /etc/uwsgi/apps-enabled/
+mkdir -p /etc/uwsgi/apps-available /etc/uwsgi/apps-enabled
+sudo cp provision/starter.ini /etc/uwsgi/apps-available/
+sudo ln -s /etc/uwsgi/apps-available/starter.ini /etc/uwsgi/apps-enabled/
 
+# Let systemd know about uwsgi
 sudo cp provision/uwsgi.service /etc/systemd/system/
-
-# again, for good measure
-#sudo touch /tmp/uwsgi.socket
-#sudo chmod 666 /tmp/uwsgi.socket
-#sudo chown www-data:www-data /tmp/uwsgi.socket
-
-# Ready to (re)start things up
 sudo systemctl daemon-reload
+
+# Restart uwsgi and nginx
 sudo systemctl start uwsgi
 sudo systemctl restart nginx
 
 # systemctl status uwsgi.service
-
-

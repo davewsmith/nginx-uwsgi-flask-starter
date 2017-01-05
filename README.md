@@ -35,7 +35,7 @@ First, verify that the Flask app isn't broken. For this you'll need to activate 
 
     cd /vagrant
     . venv/bin/activate
-    FLASK_APP=app.py flask run --host 0.0.0.0:5000
+    FLASK_APP=starter/starter.py flask run --host 0.0.0.0
 
 From a browser outside of the VM, try `http://localhost:5000`
 
