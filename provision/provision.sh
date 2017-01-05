@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo apt-get update
-# This is pro-forma, and not necessary while playing around
+# This is pro-forma, and not necessary if only playing around.
 # sudo apt-get upgrade -y
 
 # Ensure basic quality-of-life
@@ -10,7 +10,6 @@ sudo apt-get install -y vim git
 # Python parts
 sudo apt-get install -y build-essential python3-dev python3-setuptools python3-pip
 sudo apt-get install -y python-virtualenv
-# sudo apt-get install -y sqlite3
 
 # Set up the virtual environment and install dependencies
 cd /vagrant
