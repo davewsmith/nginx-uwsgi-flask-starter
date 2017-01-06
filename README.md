@@ -6,7 +6,7 @@ I put this together to record the fiddly bits of getting started with this stack
 
 If you found your way here after struggling with blog posts that walk you through getting a similar stack deployed, you'll probably also have seen many stackoverflow posts asking about weird problems that can happen along the way if you don't get everything just right. Study the provising script carefully. If you must diverge, test frequently.
 
-# Requirements
+## Requirements
 
 This was developed on a laptop running Ubuntu 14.04.
 
@@ -16,7 +16,7 @@ Building the VM requires virtualbox and Vagrant
 
 gets you the former. `http://vagrant.io` gets you the latter.
 
-# Building a VM
+## Building a VM
 
 Pull this down from github, then
 
@@ -56,9 +56,9 @@ then visit `http://localhost:5000`. It's often useful to consult `/var/log/uwsgi
 
 ## Deploying to a Pi
 
-At the moment, it's a matter of pulling this code down onto a Pi, ignoring `Vagrantfile`, and manually performing the steps in `provision/provision.sh`. Simplifying that is on my list.
+At the moment, it's a matter of pulling this code down onto a Pi, ignoring `Vagrantfile`, and manually performing the steps in `provision/provision.sh`. Simplifying that is on my list. At the moment I'm taking the lazy approach of deploying to `/vagrant` on the Pi.
 
 ## But but but...
 
-This is unwarrantied, use-at-your-own-risk-ware. Pull requests that fix egregious problems are welcome; feature PRs may be ignored. I'm not an expert on uWSGI, and suggest taking your questions to #irc or stackoverflow. And yeah, I could use `gunicorn`, but don't for reasons.
+This is unwarrantied, use-at-your-own-risk-ware. Pull requests that fix egregious problems are welcome; feature PRs may be ignored. And yeah, I could use `gunicorn`, but don't for reasons. It's an entirely viable option.
 
