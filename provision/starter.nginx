@@ -9,6 +9,7 @@ server {
 
     location /static/ {
         root /vagrant/starter;
+        autoindex off;
     }
 
     location / {
