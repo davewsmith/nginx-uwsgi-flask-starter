@@ -4,7 +4,7 @@ This project builds a Virtual Machine for Flask development, using nginx, uwsgi,
 
 I put this together to record the fiddly bits of getting started with this stack. The VM is based on Ubuntu 16.04 instead of something closer to Jessie, mostly because I couldn't find a Debian box that had Vagrant host dir support installed, and 16.04 (like Jessie) uses `systemd`.
 
-If you found your way here after struggling with blog posts that walk you through getting a similar stack deployed, you'll probably also have seen many stackoverflow posts asking about weird problems that can happen along the way if you don't get everything just right. Study the provising script carefully. If you must diverge, test frequently.
+If you found your way here after struggling with blog posts that walk you through getting a similar stack deployed, you'll probably also have seen many stackoverflow posts asking about weird problems that can happen along the way if you don't get everything just right. Study the provisioning script carefully. If you must diverge, test frequently.
 
 ## Requirements
 
