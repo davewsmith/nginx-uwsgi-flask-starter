@@ -10,7 +10,7 @@ If you found your way here after struggling with blog posts that walk you throug
 
 This was developed on a laptop running Ubuntu 14.04.
 
-Building the VM requires virtualbox and Vagrant
+Building the VM requires VirtualBox and Vagrant
 
     sudo apt-get install virtualbox
 
