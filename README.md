@@ -4,7 +4,7 @@ This project builds a Virtual Machine for Flask development, using nginx, uwsgi,
 
 I put this together to record the fiddly bits of getting started with this stack. The VM is based on Ubuntu 16.04 instead of something closer to Jessie, mostly because I couldn't find a Debian box that had Vagrant host dir support installed, and 16.04 (like Jessie) uses `systemd`.
 
-If you found your way here after struggling with blog posts that walk you through getting a similar stack deployed, you'll probably also have seen many stackoverflow posts asking about weird problems that can happen along the way if you don't get everything just right. Study the provisioning script carefully. If you must diverge, test frequently.
+You may have found your way here after struggling to get a similar stack deployed. You've probably seen stackoverflow posts about weird problems that can happen along the way if you don't get the incantations exactly right. Study the provisioning script carefully. If you must diverge, test frequently.
 
 ## Requirements
 
@@ -22,7 +22,7 @@ Pull this down from github, then
 
     vagrant up
 
-On my Linux laptop with an SSD over a mediocre network connection, it takes about 10-15 minutes to build a VM. Once done, `http://localhost:8000` reaches the minimal flask starter app running inside the VM.
+On my Linux laptop, with an SSD over a mediocre network connection, it takes about 10-15 minutes to build a VM. Once done, `http://localhost:8000` reaches the minimal flask starter app running inside the VM. `vagrant ssh` gets you a shell in the VM. Exit that shell and `vagrant suspend` to put the VM to bed. `vagrant reload` brings it back. Those are the bare basics. Consult the Vagrant docs for more.
 
 ## Making changes
 
