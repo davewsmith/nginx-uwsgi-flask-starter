@@ -37,11 +37,10 @@ at your fingertips.
 
 If you change something and `http://localhost:8000/` fails to reach the app, it's time to `vagrant ssh` into the VM.
 
-First, check the Flask app. For this you'll need to activate the virtual environment.
+First, check the Flask app.
 
     cd /vagrant
-    . venv/bin/activate
-    FLASK_APP=starter/starter.py flask run --host 0.0.0.0
+    FLASK_APP=starter/starter.py venv/bin/flask run --host 0.0.0.0
 
 From a browser outside of the VM, visit `http://localhost:5000`
 
