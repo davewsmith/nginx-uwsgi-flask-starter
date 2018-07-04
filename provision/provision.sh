@@ -14,10 +14,7 @@ sudo apt-get install -y python-virtualenv
 # Set up the virtual environment and install dependencies
 cd /vagrant
 virtualenv venv --python=python3
-(
-    . venv/bin/activate
-    pip install -r requirements.txt
-)
+venv/bin/pip install -r requirements.txt
 
 # Set up nginx and uswgi
 sudo apt-get install -y nginx
