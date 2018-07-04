@@ -12,9 +12,13 @@ Vagrant.configure(2) do |config|
         vb.cpus = 1
     end
 
-    config.vm.provision "file", source: "~/.gitconfig", destination: ".gitconfig"
     # If all interesting boxes had guest addition, we could just copy from /vagrant/provision
     config.vm.provision "file", source: "provision", destination: "provision"
     config.vm.provision "shell", :path => "provision/provision.sh"
+
+    # Enable this if you want to remove traces of provisioning
     # config.vm.provision "shell", :inline => "rm -rf provision"
+
+    # This makes git usable from inside the VM
+    config.vm.provision "file", source: "~/.gitconfig", destination: ".gitconfig"
 end
