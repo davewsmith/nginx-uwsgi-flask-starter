@@ -2,12 +2,13 @@
 
 This project provides a recipe for building a basic Virtual Machine
 with Ubuntu 18.04 (Bionic),
-and configuring nginx to run a simple Flask app via uwsgi,
-with nginx serving up the app's static files directly.
+that sets up a simple Flask application under uwgi to be
+reverse-proxied by nginx, with nginx serving up the static parts
+of the application directly.
 
-This is pretty much the configuration you'll need to deploy onto a
-Raspberry Pi under Raspbian Stretch, though there's nothing Pi-specific
-here.
+This is pretty much the configuration you'll need to deploy onto
+a Raspberry Pi under Raspbian Stretch, though there's nothing
+Pi-specific here.
 
 You may have found your way here after struggling to get a similar stack
 deployed. You've probably seen stackoverflow posts about weird problems
@@ -32,11 +33,14 @@ On my Linux laptop, with an SSD over a mediocre network connection,
 it takes about 10-15 minutes to build a VM.
 Once done, `http://localhost:8000` reaches the minimal flask starter
 app running inside the VM.
+
  `vagrant ssh` gets you a shell in the VM.
+
 Exit that shell and `vagrant suspend` to put the VM to bed.
+
 `vagrant reload` brings it back.
 
- Those are the bare basics. Consult the Vagrant docs for more.
+Those are the bare basics. Consult the Vagrant docs for more.
 
 ## Making changes
 
@@ -47,7 +51,6 @@ and
 
     sudo systemctl restart ngingx
     sudo systemctl restart uwsgi
-
 
 ## When something breaks
 
