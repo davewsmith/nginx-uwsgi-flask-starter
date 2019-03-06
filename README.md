@@ -96,5 +96,5 @@ At the moment I'm taking the lazy approach of deploying to `/vagrant` on the Pi.
 This is unwarrantied, use-at-your-own-risk-ware.
 Pull requests that fix egregious problems are welcome;
 feature PRs may be ignored.
-And yeah, `gunicorn` is a viable alternative to `uwsgi`, but don't use it for reasons.
+And yeah, `gunicorn` is a viable alternative to `uwsgi`. I don't use it for reasons that might not be your reasons.
 
