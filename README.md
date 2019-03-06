@@ -60,12 +60,10 @@ it's time to `vagrant ssh` into the VM.
 First, check the Flask app.
 
     cd /vagrant
-    export FLASK_DEBUG=1
-    expoert FLASK_APP=starter/starter.py
-    venv/bin/flask run --host 0.0.0.0
+    FLASK_APP=starter/starter.py FLASK_DEBUG=1 venv/bin/flask run --host 0.0.0.0
 
 From a browser outside of the VM, visit `http://localhost:5000`.
-Flask will spew errors into the browser, into the console, and sometimes both.
+If there errors, Flask will spew errors into the browser, into the console, and sometimes both.
 
 If your app works on :5000, the problem probably isn't your app.
 
